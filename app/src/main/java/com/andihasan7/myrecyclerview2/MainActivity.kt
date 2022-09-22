@@ -2,6 +2,7 @@ package com.andihasan7.myrecyclerview2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -37,5 +38,15 @@ class MainActivity : AppCompatActivity() {
         rvHeroes.layoutManager = LinearLayoutManager(this)
         val listHeroAdapter = ListHeroAdapter(list)
         rvHeroes.adapter = listHeroAdapter
+        // metode klik setiap item
+        listHeroAdapter.setOnItemClickCallback(object : ListHeroAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Hero) {
+                showSelectedHero(data)
+            }
+        })
+    }
+
+    private fun showSelectedHero(hero: Hero) {
+        Toast.makeText(this, "Kamu memilih " + hero.name, Toast.LENGTH_SHORT).show()
     }
 }
