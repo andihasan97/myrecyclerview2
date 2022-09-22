@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         val listHeroAdapter = ListHeroAdapter(list)
         rvHeroes.adapter = listHeroAdapter
-        // metode klik setiap item
+        // mengambil data ke Activity
         listHeroAdapter.setOnItemClickCallback(object : ListHeroAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Hero) {
                 showSelectedHero(data)
