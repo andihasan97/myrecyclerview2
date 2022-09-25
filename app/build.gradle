@@ -16,6 +16,12 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    /* aktifkan viewBinding
+
+     */
+    buildFeatures {
+        viewBinding true
+    }
 
     buildTypes {
         release {
