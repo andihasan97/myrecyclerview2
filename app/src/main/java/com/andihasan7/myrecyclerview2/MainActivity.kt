@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.andihasan7.myrecyclerview2.databinding.ActivityMainBinding
+//import com.andihasan7.myrecyclerview2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     //private lateinit var binding: ActivityMainBinding

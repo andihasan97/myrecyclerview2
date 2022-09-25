@@ -43,7 +43,11 @@ class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adap
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val (name, description, photo) = listHero[position]
         
-        holder.binding.imgItemPhoto.setImageResource(photo)
+        Glide.with(holder.itemView.context)
+            .load(photo)
+            .circleCrop()
+                // kalau pakai viewBinding jadi seperti ini
+            .into(holder.binding.imgItemPhoto)
         holder.binding.tvItemName.text = name
         holder.binding.tvItemDescription.text = description
         /* 
